@@ -1,6 +1,6 @@
 FROM debian:stretch-slim
 
-ENV DKRON_VERSION 0.10.3
+ENV DKRON_VERSION 2.2.2
 
 RUN set -eux; \
 	\
