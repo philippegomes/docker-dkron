@@ -1,6 +1,6 @@
 FROM debian:stretch-slim
 
-ENV DKRON_VERSION 0.10.3
+ENV DKRON_VERSION 2.2.2
 
 RUN set -eux; \
 	\
@@ -10,7 +10,7 @@ RUN set -eux; \
 	mkdir -p /opt/local/dkron; \
 	cd /opt/local/dkron; \
 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; \
-	wget -O /opt/local/dkron/dkron.tar.gz "https://github.com/victorcoder/dkron/releases/download/v${DKRON_VERSION}/dkron_${DKRON_VERSION}_linux_$dpkgArch.tar.gz"; \
+	wget -O /opt/local/dkron/dkron.tar.gz "https://github.com/distribworks/dkron/releases/download/v${DKRON_VERSION}/dkron_${DKRON_VERSION}_linux_$dpkgArch.tar.gz"; \
 	tar -xzf dkron.tar.gz; \
 	rm /opt/local/dkron/dkron.tar.gz; \
 	\
